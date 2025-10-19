@@ -1,0 +1,8 @@
+FROM debian:trixie
+
+RUN apt-get -y update && apt-get -y install \
+    build-essential \
+    cmake \
+    ninja-build \
+    qt6-declarative-dev \
+    libxkbcommon-dev
