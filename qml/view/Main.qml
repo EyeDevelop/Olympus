@@ -4,7 +4,7 @@ import QtQuick.Layouts
 import QtQuick.Controls.Basic
 
 ApplicationWindow {
-    id: window
+    id: app
     width: 1280
     height: 720
     visible: true
@@ -12,7 +12,24 @@ ApplicationWindow {
     title: "Olympus"
     color: "#FF404040"
 
-    RowLayout {
-        id: mainUI
+    property string currentPage: "Home.qml"
+    property bool inAnimation: false
+
+    Loader {
+        id: mainLoader
+        anchors.fill: parent
+        source: app.currentPage
+    }
+
+    function loadPage(page) {
+        if (inAnimation || currentPage === page) {
+            return false;
+        }
+
+        inAnimation = true;
+        currentPage = page;
+        inAnimation = false;
+
+        return true;
     }
 }

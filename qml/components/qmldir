@@ -1,0 +1,4 @@
+module Components
+
+Button 1.0 Button.qml
+AppTile 1.0 AppTile.qml

@@ -1,2 +1,7 @@
 module View
+
 Main 1.0 Main.qml
+AppPage 1.0 AppPage.qml
+
+Home 1.0 Home.qml
+ControllerConfig 1.0 ControllerConfig.qml

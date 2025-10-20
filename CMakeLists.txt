@@ -33,5 +33,11 @@ qt_add_qml_module(olympus
     URI ${PROJECT_NAME}
     VERSION 1.0
     QML_FILES
+    qml/components/AppTile.qml
+    qml/components/Button.qml
+
+    qml/view/AppPage.qml
+    qml/view/ControllerConfig.qml
+    qml/view/Home.qml
     qml/view/Main.qml
 )
